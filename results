@@ -1,21 +1,91 @@
-./Main.sh -l RealTimeLoader -f ../Configurations/RTApp-HTTP-Uart-new.cfg -m StateMachine:START
+./Main.sh -l RealTimeLoader -f ../Configurations/RTApp-HTTP-Uart-ControlGam.cfg -m StateMachine:START
 :../Build/x86-linux/Components/DataSources/UARTDataSource/:/opt/MARTe2-git/MARTe2-demos-padova/Build/x86-linux/Components/DataSources/ADCSimulator/:/opt/MARTe2-git/MARTe2-demos-padova/Build/x86-linux/Components/DataSources/MDSReaderNS/:/opt/MARTe2-git/MARTe2-demos-padova/Build/x86-linux/Components/DataSources/MDSStream/:/opt/MARTe2-git/MARTe2-demos-padova/Build/x86-linux/Components/DataSources/SimpleUDPSender/:/opt/MARTe2-git/MARTe2-demos-padova/Build/x86-linux/Components/GAMs/FixedGAMExample1/:/opt/MARTe2-git/MARTe2-demos-padova/Build/x86-linux/Components/GAMs/VariableGAMExample1/:/opt/MARTe2-git/MARTe2-demos-padova/Build/x86-linux/Components/GAMs/TimeGeneratorGAM/:/opt/MARTe2-git/MARTe2-demos-padova/Build/x86-linux/Components/GAMs/VoltToDacGAM/:/opt/MARTe2-git/MARTe2-demos-padova/Build/x86-linux/Components/GAMs/AdcToVoltGAM/:/opt/MARTe2-git/MARTe2-demos-padova/Build/x86-linux/Components/GAMs/FilterDownsamplingGAM/:/opt/MARTe2-git/MARTe2-demos-padova/Build/x86-linux/Components/Interfaces/TCPSocketMessageProxyExample/:/opt/MARTe2-git/MARTe2-demos-padova/Build/x86-linux/Components/Other/ControllerEx1/:/opt/MARTe2-git/MARTe2-demos-padova/Build/x86-linux/Components/Other/ControllerEx2/:/opt/MARTe2-git/MARTe2/Build/x86-linux/Core/:/opt/MARTe2-git/MARTe2-components/Build/x86-linux/Components/DataSources/EPICSCA/:/opt/MARTe2-git/MARTe2-components/Build/x86-linux/Components/DataSources/EPICSPVA/:/opt/MARTe2-git/MARTe2-components/Build/x86-linux/Components/DataSources/LinuxTimer/:/opt/MARTe2-git/MARTe2-components/Build/x86-linux/Components/DataSources/LoggerDataSource/:/opt/MARTe2-git/MARTe2-components/Build/x86-linux/Components/DataSources/FileDataSource/:/opt/MARTe2-git/MARTe2-components/Build/x86-linux/Components/DataSources/LinkDataSource/:/opt/MARTe2-git/MARTe2-components/Build/x86-linux/Components/DataSources/UDP/:/opt/MARTe2-git/MARTe2-components/Build/x86-linux/Components/DataSources/MDSReader/:/opt/MARTe2-git/MARTe2-components/Build/x86-linux/Components/DataSources/MDSWriter/:/opt/MARTe2-git/MARTe2-components/Build/x86-linux/Components/DataSources/RealTimeThreadSynchronisation/:/opt/MARTe2-git/MARTe2-components/Build/x86-linux/Components/DataSources/RealTimeThreadAsyncBridge/:/opt/MARTe2-git/MARTe2-components/Build/x86-linux/Components/GAMs/ConstantGAM/:/opt/MARTe2-git/MARTe2-components/Build/x86-linux/Components/GAMs/ConversionGAM/:/opt/MARTe2-git/MARTe2-components/Build/x86-linux/Components/GAMs/IOGAM/:/opt/MARTe2-git/MARTe2-components/Build/x86-linux/Components/GAMs/FilterGAM/:/opt/MARTe2-git/MARTe2-components/Build/x86-linux/Components/GAMs/HistogramGAM/:/opt/MARTe2-git/MARTe2-components/Build/x86-linux/Components/GAMs/MathExpressionGAM/:/opt/MARTe2-git/MARTe2-components/Build/x86-linux/Components/GAMs/SSMGAM/:/opt/MARTe2-git/MARTe2-components/Build/x86-linux/Components/GAMs/TriggerOnChangeGAM/:/opt/MARTe2-git/MARTe2-components/Build/x86-linux/Components/GAMs/WaveformGAM/:/opt/MARTe2-git/MARTe2-components/Build/x86-linux/Components/Interfaces/BaseLib2Wrapper/:/opt/MARTe2-git/MARTe2-components/Build/x86-linux/Components/Interfaces/EPICS/:/opt/MARTe2-git/MARTe2-components/Build/x86-linux/Components/Interfaces/EPICSPVA/:/opt/MARTe2-git/MARTe2-components/Build/x86-linux/Components/Interfaces/MemoryGate/:/opt/MARTe2-git/MARTe2-components/Build/x86-linux/Components/Interfaces/SysLogger/:/opt/MARTe2-git/MARTe2-components/Build/x86-linux/Components/DataSources/UARTDataSource/::/opt/epics/epics-base/lib/linux-x86_64::/lib/
 [Debug - Bootstrap.cpp:79]: Arguments:
 -l = "RealTimeLoader"
--f = "../Configurations/RTApp-HTTP-Uart-new.cfg"
+-f = "../Configurations/RTApp-HTTP-Uart-ControlGam.cfg"
 -m = "StateMachine:START"
 
 [Information - Bootstrap.cpp:201]: Loader parameters:
 -l = "RealTimeLoader"
--f = "../Configurations/RTApp-HTTP-Uart-new.cfg"
+-f = "../Configurations/RTApp-HTTP-Uart-ControlGam.cfg"
 -m = "StateMachine:START"
 Loader = "RealTimeLoader"
-Filename = "../Conf
-[FatalError - BasicFile.cpp:279]: BasicFile::Open(). File cannot be opened
-[ParametersError - Bootstrap.cpp:106]: Failed to open the input file ../Configurations/RTApp-HTTP-Uart-new.cfg
-[FatalError - MARTeApp.cpp:96]: Could not GetConfigurationStream.
+Filename = "
+[Information - Loader.cpp:67]: DefaultCPUs set to 1
+[Information - Loader.cpp:74]: SchedulerGranularity is 10000
+[Debug - AnyTypeCreator.cpp:143]: ToType: Type not found or not set (an explicit cast is likely to be missing); automatic cast to C-string
+[Debug - Loader.cpp:189]: Purging ObjectRegistryDatabase with 0 objects
+[Debug - Loader.cpp:192]: Purge ObjectRegistryDatabase. Number of objects left: 0
+[Information - HttpObjectBrowser.cpp:114]: No Realm specified
+[Information - HttpDirectoryResource.cpp:61]: Serving directory /opt/marte/MARTe2-dev/Resources/HTTP
+[Information - HttpDirectoryResource.cpp:61]: Serving directory /home/bernardo/git-repos/MARTe2-demos-padova/Resources/HTTP
+[Information - HttpObjectBrowser.cpp:114]: No Realm specified
+[Information - HttpService.cpp:99]: IsTextMode unspecified: using default 1
+[Information - HttpService.cpp:103]: ChunkSize not specified: using default 32
+[Warning - Threads.cpp:173]: Requested a thread priority that is higher than the one supported by the selected policy - clipping to the maximum value supported by the policy.
+[Warning - Threads.cpp:173]: Requested a thread priority that is higher than the one supported by the selected policy - clipping to the maximum value supported by the policy.
+[Warning - LoadableLibrary.cpp:78]: LoadableLibrary: Failed dlopen(): IOGAM.gam: cannot open shared object file: No such file or directory
+[Warning - LoadableLibrary.cpp:78]: LoadableLibrary: Failed dlopen(): IOGAM.drv: cannot open shared object file: No such file or directory
+[Warning - LoadableLibrary.cpp:78]: LoadableLibrary: Failed dlopen(): FixedGAMExample1.gam: cannot open shared object file: No such file or directory
+[Warning - LoadableLibrary.cpp:78]: LoadableLibrary: Failed dlopen(): FixedGAMExample1.drv: cannot open shared object file: No such file or directory
+[Information - FixedGAMExample1.cpp:65]: Parameter Gain set to 5
+[Information - FixedGAMExample1.cpp:65]: Parameter Gain set to 3
+[Warning - LoadableLibrary.cpp:78]: LoadableLibrary: Failed dlopen(): RoverControlGAM.gam: cannot open shared object file: No such file or directory
+[Warning - LoadableLibrary.cpp:78]: LoadableLibrary: Failed dlopen(): RoverControlGAM.drv: cannot open shared object file: No such file or directory
+[Warning - LoadableLibrary.cpp:78]: LoadableLibrary: Failed dlopen(): RoverControlGAM.so: cannot open shared object file: No such file or directory
+[FatalError - Reference.cpp:129]: Reference: Failed CreateByName() in constructor
+[FatalError - ReferenceContainer.cpp:420]: Failed to Initialise object with name +RoverControlGAM
+[FatalError - ReferenceContainer.cpp:420]: Failed to Initialise object with name +Functions
+[FatalError - ReferenceContainer.cpp:420]: Failed to Initialise object with name $TestApp
+[FatalError - RealTimeApplication.cpp:73]: Could not stop the RealTimeApplication. Was it ever started?
+[InitialisationEr - Loader.cpp:200]: Failed to initialise the ObjectRegistryDatabase
+[FatalError - MARTeApp.cpp:118]: Could not Initialise the loader with name RealTimeLoader
 [Information - MARTeApp.cpp:155]: [Object] - instances: 0
 [Information - MARTeApp.cpp:155]: [ReferenceContainer] - instances: 0
 [Information - MARTeApp.cpp:155]: [AnyObject] - instances: 0
 [Information - MARTeApp.cpp:155]: [ConfigurationDatabase] - instances: 0
 [Warning - MARTeApp.cpp:155]: [ConfigurationDatabaseNode] - instances: 1
+[Information - MARTeApp.cpp:155]: [IntrospectionStructure] - instances: 0
+[Information - MARTeApp.cpp:155]: [Message] - instances: 0
+[Information - MARTeApp.cpp:155]: [MessageFilterPool] - instances: 0
+[Information - MARTeApp.cpp:155]: [ObjectRegistryDatabaseMessageFilter] - instances: 0
+[Information - MARTeApp.cpp:155]: [ObjectRegistryDatabaseMessageI] - instances: 0
+[Information - MARTeApp.cpp:155]: [RegisteredMethodsMessageFilter] - instances: 0
+[Information - MARTeApp.cpp:155]: [ReplyMessageCatcherMessageFilter] - instances: 0
+[Information - MARTeApp.cpp:155]: [GAMBareScheduler] - instances: 0
+[Information - MARTeApp.cpp:155]: [GAMDataSource] - instances: 0
+[Information - MARTeApp.cpp:155]: [MemoryMapInterpolatedInputBroker] - instances: 0
+[Information - MARTeApp.cpp:155]: [MemoryMapMultiBufferInputBroker] - instances: 0
+[Information - MARTeApp.cpp:155]: [MemoryMapMultiBufferOutputBroker] - instances: 0
+[Information - MARTeApp.cpp:155]: [MemoryMapInputBroker] - instances: 0
+[Information - MARTeApp.cpp:155]: [MemoryMapOutputBroker] - instances: 0
+[Information - MARTeApp.cpp:155]: [MemoryMapSynchronisedInputBroker] - instances: 0
+[Information - MARTeApp.cpp:155]: [MemoryMapSynchronisedMultiBufferInputBroker] - instances: 0
+[Information - MARTeApp.cpp:155]: [MemoryMapSynchronisedMultiBufferOutputBroker] - instances: 0
+[Information - MARTeApp.cpp:155]: [MemoryMapSynchronisedOutputBroker] - instances: 0
+[Information - MARTeApp.cpp:155]: [RealTimeApplication] - instances: 0
+[Information - MARTeApp.cpp:155]: [RealTimeApplicationConfigurationBuilder] - instances: 0
+[Information - MARTeApp.cpp:155]: [RealTimeState] - instances: 0
+[Information - MARTeApp.cpp:155]: [RealTimeThread] - instances: 0
+[Information - MARTeApp.cpp:155]: [TimingDataSource] - instances: 0
+[Information - MARTeApp.cpp:155]: [ConfigurationLoaderHashCRC] - instances: 0
+[Information - MARTeApp.cpp:155]: [Loader] - instances: 0
+[Information - MARTeApp.cpp:155]: [RealTimeLoader] - instances: 0
+[Information - MARTeApp.cpp:155]: [ThreadsInformationQuery] - instances: 0
+[Information - MARTeApp.cpp:155]: [ConsoleLogger] - instances: 0
+[Information - MARTeApp.cpp:155]: [LoggerService] - instances: 0
+[Information - MARTeApp.cpp:155]: [QueuedReplyMessageCatcherFilter] - instances: 0
+[Information - MARTeApp.cpp:155]: [StateMachine] - instances: 0
+[Information - MARTeApp.cpp:155]: [StateMachineEvent] - instances: 0
+[Information - MARTeApp.cpp:155]: [FastScheduler] - instances: 0
+[Information - MARTeApp.cpp:155]: [GAMScheduler] - instances: 0
+[Information - MARTeApp.cpp:155]: [MemoryMapAsyncOutputBroker] - instances: 0
+[Information - MARTeApp.cpp:155]: [MemoryMapAsyncTriggerOutputBroker] - instances: 0
+[Information - MARTeApp.cpp:155]: [UDPLogger] - instances: 0
+[Information - MARTeApp.cpp:155]: [HttpDirectoryResource] - instances: 0
+[Information - MARTeApp.cpp:155]: [HttpMessageInterface] - instances: 0
+[Information - MARTeApp.cpp:155]: [HttpObjectBrowser] - instances: 0
+[Information - MARTeApp.cpp:155]: [HttpService] - instances: 0
+[Information - MARTeApp.cpp:155]: [ConfigurationLoaderTCP] - instances: 0
+[Information - MARTeApp.cpp:155]: [IOGAM] - instances: 0
+[Information - MARTeApp.cpp:155]: [FixedGAMExample1] - instances: 0
