@@ -1,18 +1,40 @@
-make: Entering directory '/home/andrea/git-repos/ArduinoRover/marte2/GAMs/RoverControlGAM'
-mkdir -p ../..//Build/x86-linux/Components/GAMs/RoverControlGAM
-g++ -c  -I. -I/opt/MARTe2-git/MARTe2/Source/Core/BareMetal/L0Types -I/opt/MARTe2-git/MARTe2/Source/Core/BareMetal/L1Portability -I/opt/MARTe2-git/MARTe2/Source/Core/BareMetal/L2Objects -I/opt/MARTe2-git/MARTe2/Source/Core/BareMetal/L3Streams -I/opt/MARTe2-git/MARTe2/Source/Core/BareMetal/L4Messages -I/opt/MARTe2-git/MARTe2/Source/Core/BareMetal/L4Configuration -I/opt/MARTe2-git/MARTe2/Source/Core/BareMetal/L5GAMs -I/opt/MARTe2-git/MARTe2/Source/Core/Scheduler/L1Portability -I/opt/MARTe2-git/MARTe2/Source/Core/Scheduler/L3Services -I/opt/MARTe2-git/MARTe2/Source/Core/Scheduler/L4Messages -I/opt/MARTe2-git/MARTe2/Source/Core/Scheduler/L5GAMs -fPIC -Wall -std=c++98 -Werror -Wno-invalid-offsetof -Wno-unused-variable -fno-strict-aliasing -frtti  -DMARTe2_TEST_ENVIRONMENT=GTest -DARCHITECTURE=x86_gcc -DENVIRONMENT=Linux -DUSE_PTHREAD -pthread -Wno-deprecated-declarations -Wno-unused-value -Wno-error=uninitialized -Wno-error=mismatched-new-delete -g -ggdb  RoverControlGAM.cpp -o ../..//Build/x86-linux/Components/GAMs/RoverControlGAM/RoverControlGAM.o
-touch createLibrary
-touch ../..//Build/x86-linux/Components/GAMs/RoverControlGAM/RoverControlGAM.a
-rm -f ../..//Build/x86-linux/Components/GAMs/RoverControlGAM/RoverControlGAM.a
-ld -r ../..//Build/x86-linux/Components/GAMs/RoverControlGAM/RoverControlGAM.o   -o ../..//Build/x86-linux/Components/GAMs/RoverControlGAM/RoverControlGAM.a
-rm -f createLibrary
-touch ../..//Build/x86-linux/Components/GAMs/RoverControlGAM/RoverControlGAM.so
-g++ -Wl,--no-as-needed -fPIC  -shared ../..//Build/x86-linux/Components/GAMs/RoverControlGAM/RoverControlGAM.o  -lm -lpthread -lrt -ldl  -Wl,-soname,RoverControlGAM.so -o ../..//Build/x86-linux/Components/GAMs/RoverControlGAM/RoverControlGAM.so
-touch ../..//Build/x86-linux/Components/GAMs/RoverControlGAM/libRoverControlGAM.so
-rm  ../..//Build/x86-linux/Components/GAMs/RoverControlGAM/libRoverControlGAM.so
-ln -fns RoverControlGAM.so ../..//Build/x86-linux/Components/GAMs/RoverControlGAM/libRoverControlGAM.so
-rm -f createLibrary
-echo  ../..//Build/x86-linux/Components/GAMs/RoverControlGAM/RoverControlGAM.o 
-../..//Build/x86-linux/Components/GAMs/RoverControlGAM/RoverControlGAM.o
-make: Leaving directory '/home/andrea/git-repos/ArduinoRover/marte2/GAMs/RoverControlGAM'
-➜  marte2 git:(main) ✗ 
+[Information - LoggerBroker.cpp:152]: Time [0:0]:12500
+[Warning - UARTDataSource.cpp:300]: Failed to read 6 bytes from serial. Trying to resynchronise by waiting 500000 us for no data
+[Warning - UARTDataSource.cpp:306]: No data arrived in the last 500000 us. As such, the next packet should be synchronised.
+[Information - RoverCommunicatorTX.cpp:305]: SendMessage  0x0
+[Information - LoggerBroker.cpp:152]: Time [0:0]:412500
+[Warning - UARTDataSource.cpp:300]: Failed to read 6 bytes from serial. Trying to resynchronise by waiting 500000 us for no data
+[Warning - UARTDataSource.cpp:306]: No data arrived in the last 500000 us. As such, the next packet should be synchronised.
+[Information - RoverCommunicatorTX.cpp:305]: SendMessage  0x0
+[Information - LoggerBroker.cpp:152]: Time [0:0]:1712500
+[Warning - UARTDataSource.cpp:300]: Failed to read 6 bytes from serial. Trying to resynchronise by waiting 500000 us for no data
+[Warning - UARTDataSource.cpp:306]: No data arrived in the last 500000 us. As such, the next packet should be synchronised.
+[Information - RoverCommunicatorTX.cpp:305]: SendMessage  0x0
+[Information - LoggerBroker.cpp:152]: Time [0:0]:3025000
+[Warning - UARTDataSource.cpp:300]: Failed to read 6 bytes from serial. Trying to resynchronise by waiting 500000 us for no data
+[Warning - UARTDataSource.cpp:306]: No data arrived in the last 500000 us. As such, the next packet should be synchronised.
+[Information - RoverCommunicatorTX.cpp:305]: SendMessage  0x0
+[Information - LoggerBroker.cpp:152]: Time [0:0]:4325000
+[Warning - UARTDataSource.cpp:300]: Failed to read 6 bytes from serial. Trying to resynchronise by waiting 500000 us for no data
+[Warning - UARTDataSource.cpp:306]: No data arrived in the last 500000 us. As such, the next packet should be synchronised.
+[Information - RoverCommunicatorTX.cpp:305]: SendMessage  0x0
+[Information - LoggerBroker.cpp:152]: Time [0:0]:5637500
+[Warning - UARTDataSource.cpp:300]: Failed to read 6 bytes from serial. Trying to resynchronise by waiting 500000 us for no data
+[Warning - UARTDataSource.cpp:306]: No data arrived in the last 500000 us. As such, the next packet should be synchronised.
+[Information - RoverCommunicatorTX.cpp:305]: SendMessage  0x0
+[Information - LoggerBroker.cpp:152]: Time [0:0]:6950000
+[Warning - UARTDataSource.cpp:300]: Failed to read 6 bytes from serial. Trying to resynchronise by waiting 500000 us for no data
+[Warning - UARTDataSource.cpp:306]: No data arrived in the last 500000 us. As such, the next packet should be synchronised.
+[Information - RoverCommunicatorTX.cpp:305]: SendMessage  0x0
+[Information - LoggerBroker.cpp:152]: Time [0:0]:8250000
+[Warning - UARTDataSource.cpp:300]: Failed to read 6 bytes from serial. Trying to resynchronise by waiting 500000 us for no data
+[Warning - UARTDataSource.cpp:306]: No data arrived in the last 500000 us. As such, the next packet should be synchronised.
+[Information - RoverCommunicatorTX.cpp:305]: SendMessage  0x0
+[Information - LoggerBroker.cpp:152]: Time [0:0]:9562500
+[Warning - UARTDataSource.cpp:300]: Failed to read 6 bytes from serial. Trying to resynchronise by waiting 500000 us for no data
+[Warning - UARTDataSource.cpp:306]: No data arrived in the last 500000 us. As such, the next packet should be synchronised.
+[Information - RoverCommunicatorTX.cpp:305]: SendMessage  0x0
+[Information - LoggerBroker.cpp:152]: Time [0:0]:10862500
+[Warning - UARTDataSource.cpp:300]: Failed to read 6 bytes from serial. Trying to resynchronise by waiting 500000 us for no data
+[Warning - UARTDataSource.cpp:306]: No data arrived in the last 500000 us. As such, the next packet should be synchronised.
+^Z
