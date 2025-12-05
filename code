@@ -20,3 +20,14 @@ Sent : 2 bytes
 Read 2 bytes. 	0: 0xDE 	1: 0xF9 	
 Sent : 2 bytes
 Read 2 bytes. 	0: 0xFE 	1: 0xF9 
+
+CORRENTE 100 MA WAITING NON DI .01 MA 1 SECONDO
+./psuSend 
+Read 1 bytes. 	0: 0xFE 	
+Sent : 2 bytes
+Read 2 bytes. 	0: 0xFE 	1: 0xFF 	
+Current: 100, Packet 0x9C 0x19
+Sent : 2 bytes
+Read 2 bytes. 	0: 0x9E 	1: 0x9D 	
+Sent : 2 bytes
+Read 2 bytes. 	0: 0xFE 	1: 0xF9 
