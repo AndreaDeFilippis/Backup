@@ -1,66 +1,8 @@
-// Definisci questa soglia nel .h o come costante
-// Se 1000 = 1g (9.81 m/s^2)
-// 150 = 0.15g (una pendenza di circa 8-10 gradi). Sotto questa soglia si ferma.
-const double MIN_SLOPE_THRESHOLD = 150.0; 
-
-// ... dentro Execute() ...
-
-    // 1. Converti i valori grezzi in double per la matematica
-    double ax_d = static_cast<double>(ax);
-    double ay_d = static_cast<double>(ay);
-    
-    // 2. Calcola la "Quantità di Pendenza" (Magnitudo vettore XY)
-    double slope_magnitude = sqrt(ax_d * ax_d + ay_d * ay_d);
-
-    // --- LOGICA PRINCIPALE ---
-
-    // CASO A: SIAMO IN PIANO (O c'è solo rumore)
-    if (slope_magnitude < MIN_SLOPE_THRESHOLD) {
-        
-        // Stop motori
-        *LeftWheelPWM  = 0;
-        *RightWheelPWM = 0;
-        
-        // (Opzionale) Puoi loggare che sei in "IDLE/FLAT"
-        
-    } 
-    // CASO B: SIAMO IN SALITA -> Attiviamo il controllo orientamento
-    else {
-        
-        // 3. Calcolo angolo (come facevi tu)
-        double theta_deg = atan2(ay_d, ax_d) * 180.0 / M_PI;
-        
-        // Normalizzazione angolo (-180 a +180)
-        // atan2 restituisce già tra -PI e PI, ma per sicurezza matematica:
-        if (theta_deg > 180.0) theta_deg -= 360.0;
-        if (theta_deg <= -180.0) theta_deg += 360.0;
-
-        // 4. Decisione Movimento
-        if (std::abs(theta_deg) <= ALIGN_THRESHOLD_DEG) {
-            // -- ALLINEATO: SALIAMO! --
-            
-            // Qui potresti anche modulare la velocità in base alla pendenza:
-            // Più è ripido, più dai potenza (se vuoi). Per ora fisso va bene.
-            *LeftWheelPWM  = MOTOR_SPEED;
-            *RightWheelPWM = MOTOR_SPEED; // O -MOTOR_SPEED in base al cablaggio
-            
-        } else {
-            // -- DISALLINEATO: RUOTIAMO --
-            
-            // Calcolo P (Proporzionale) + FeedForward
-            int pwm = static_cast<int>(ROT_MIN_SPEED + Kp_deg_to_speed * std::abs(theta_deg));
-            
-            // Clamp (Limitazione sicurezza)
-            if (pwm > ROT_MAX_SPEED) pwm = ROT_MAX_SPEED;
-
-            if (theta_deg > 0) {
-                // Ruota a Destra
-                *LeftWheelPWM  = pwm;
-                *RightWheelPWM = -pwm; // Motori contrapposti per girare sul posto
-            } else {
-                // Ruota a Sinistra
-                *LeftWheelPWM  = -pwm;
-                *RightWheelPWM = pwm;
-            }
-        }
-    }
+Read 1 bytes. 	0: 0xFE 	
+Sent : 2 bytes
+Read 2 bytes. 	0: 0xFE 	1: 0xFF 	
+Current: 100, Packet 0x9C 0x19
+Sent : 2 bytes
+Read 2 bytes. 	0: 0x9E 	1: 0x9D 	
+Sent : 2 bytes
+Read 2 bytes. 	0: 0xFE 	1: 0xF9 
